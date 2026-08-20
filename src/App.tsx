@@ -4,7 +4,6 @@ import { Hero } from './components/Hero';
 import { ExecutiveOverview } from './components/ExecutiveOverview';
 import { StakeholderTabSection } from './components/StakeholderTabSection';
 import { CoreCapabilitiesSection } from './components/CoreCapabilitiesSection';
-import { TradeCommissionCalculator } from './components/TradeCommissionCalculator';
 import { LeadershipSection } from './components/LeadershipSection';
 import { SocialImpactSection } from './components/SocialImpactSection';
 import { EcosystemSection } from './components/EcosystemSection';
@@ -48,10 +47,7 @@ export default function App() {
         {/* 4. Core Capabilities & Commercial Solutions */}
         <CoreCapabilitiesSection onOpenConsultation={() => handleOpenConsultation()} />
 
-        {/* 5. Interactive Referral Commission & Bima Kwik Estimator */}
-        <TradeCommissionCalculator />
-
-        {/* 6. Executive Leadership & Operational Structure Diagram */}
+        {/* 5. Executive Leadership & Operational Structure Diagram */}
         <LeadershipSection />
 
         {/* 7. ESG & Social Impact: Mama Mia's Foundation 6 Pillars */}

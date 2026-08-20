@@ -45,22 +45,22 @@ export const LeadershipSection: React.FC = () => {
                 className="bg-slate-800/85 rounded-2xl p-6 border border-slate-700/80 hover:border-amber-500/60 transition-all flex flex-col justify-between shadow-xl backdrop-blur-md group"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-start justify-between gap-3 mb-5">
                     {member.imageUrl ? (
-                      <div className="w-14 h-14 rounded-xl overflow-hidden border-2 border-amber-500/50 shadow-md group-hover:border-amber-400 transition-colors shrink-0">
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-amber-500/50 shadow-lg group-hover:border-amber-400 group-hover:shadow-amber-500/20 transition-all shrink-0 bg-slate-900">
                         <img
                           src={member.imageUrl}
                           alt={member.name}
                           referrerPolicy="no-referrer"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
                     ) : (
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 font-extrabold flex items-center justify-center text-lg shadow-md shrink-0">
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 font-extrabold flex items-center justify-center text-2xl shadow-lg shrink-0">
                         {member.avatarInitials}
                       </div>
                     )}
-                    <span className="text-[10px] font-bold uppercase text-amber-300 bg-amber-500/10 px-2 py-1 rounded border border-amber-500/20 backdrop-blur-sm">
+                    <span className="text-[10px] font-bold uppercase text-amber-300 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/30 backdrop-blur-sm whitespace-nowrap">
                       {member.titleBadge}
                     </span>
                   </div>

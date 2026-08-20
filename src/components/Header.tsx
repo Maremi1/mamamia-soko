@@ -76,18 +76,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenConsultation }) => {
       {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-[#0A192F] font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
-            M
-          </div>
-          <div>
-            <div className="font-bold text-lg leading-tight tracking-tight text-white flex items-center gap-1.5">
-              Mama Mia’s Soko
-            </div>
-            <div className="text-[11px] text-amber-400/90 font-medium tracking-wide">
-              A Division of I Link Limited
-            </div>
-          </div>
+        <a href="#hero" className="flex items-center group py-1">
+          <img
+            src="/src/assets/images/mamamia_soko_logo.png"
+            alt="Mama Mia's Soko Official Logo"
+            className="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+          />
         </a>
 
         {/* Desktop Navigation Links */}

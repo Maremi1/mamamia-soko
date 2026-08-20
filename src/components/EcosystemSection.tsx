@@ -11,7 +11,16 @@ import {
 } from 'lucide-react';
 
 export const EcosystemSection: React.FC = () => {
-  const getPortalIcon = (iconName: string) => {
+  const getPortalIcon = (iconName: string, domain?: string) => {
+    if (domain && (domain === 'mamamia.co.tz' || domain === 'soko.mamamia.co.tz')) {
+      return (
+        <img
+          src="/src/assets/images/mamamia_soko_emblem.png"
+          alt="Mama Mia's Soko Emblem"
+          className="w-6 h-6 object-contain"
+        />
+      );
+    }
     switch (iconName) {
       case 'Building2':
         return <Building2 className="w-6 h-6 text-amber-400" />;
@@ -68,7 +77,7 @@ export const EcosystemSection: React.FC = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent" />
                     <div className="absolute top-3 left-3 p-2.5 bg-slate-950/85 rounded-xl border border-amber-500/40 backdrop-blur-md shadow-lg">
-                      {getPortalIcon(portal.icon)}
+                      {getPortalIcon(portal.icon, portal.domain)}
                     </div>
                     <span className="absolute top-3 right-3 text-xs font-bold uppercase text-amber-300 bg-slate-950/85 px-3 py-1 rounded-full border border-amber-500/40 backdrop-blur-md shadow-lg">
                       {portal.badge}
@@ -77,7 +86,7 @@ export const EcosystemSection: React.FC = () => {
                 ) : (
                   <div className="p-6 pb-0 flex items-center justify-between">
                     <div className="p-3 bg-slate-900 rounded-xl border border-slate-700 group-hover:border-amber-500/40 transition-colors">
-                      {getPortalIcon(portal.icon)}
+                      {getPortalIcon(portal.icon, portal.domain)}
                     </div>
                     <span className="text-[10px] font-bold uppercase text-amber-300 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">
                       {portal.badge}

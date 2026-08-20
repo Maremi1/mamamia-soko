@@ -20,15 +20,14 @@ export const Footer: React.FC = () => {
           
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-[#0A192F] font-bold text-xl shadow-md">
-                M
-              </div>
-              <div>
-                <div className="font-bold text-base text-white">Mama Mia’s Soko</div>
-                <div className="text-[11px] text-amber-400 font-medium">
-                  A Division of I Link Limited
-                </div>
+            <div className="space-y-2">
+              <img
+                src="/src/assets/images/mamamia_soko_logo.png"
+                alt="Mama Mia's Soko Logo"
+                className="h-12 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]"
+              />
+              <div className="text-xs text-amber-400 font-semibold tracking-wide">
+                A Division of I Link Limited &bull; Kigali & Dar es Salaam
               </div>
             </div>
 
@@ -90,10 +89,10 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://www.mamamia.co.tz"
+                  href="https://mamamia.co.tz"
                   className="flex items-center justify-between text-slate-300 hover:text-amber-400 transition-colors"
                 >
-                  <span>🌐 www.mamamia.co.tz</span>
+                  <span>🌐 mamamia.co.tz</span>
                   <ExternalLink className="w-3 h-3 text-slate-500" />
                 </a>
               </li>
@@ -110,34 +109,34 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="https://www.bimakwik.com"
+                  href="https://bimakwik.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between text-slate-300 hover:text-amber-400 transition-colors"
                 >
-                  <span>🛡️ www.bimakwik.com</span>
+                  <span>🛡️ bimakwik.com</span>
                   <ExternalLink className="w-3 h-3 text-slate-500" />
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.foundation.mamamia.co.tz"
+                  href="https://foundation.mamamia.co.tz"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between text-slate-300 hover:text-amber-400 transition-colors"
                 >
-                  <span>💚 www.foundation.mamamia.co.tz</span>
+                  <span>💚 foundation.mamamia.co.tz</span>
                   <ExternalLink className="w-3 h-3 text-slate-500" />
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.ilinkbiz.com"
+                  href="https://ilinkbiz.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between text-slate-300 hover:text-amber-400 transition-colors"
                 >
-                  <span>🌐 www.ilinkbiz.com</span>
+                  <span>🌐 ilinkbiz.com</span>
                   <ExternalLink className="w-3 h-3 text-slate-500" />
                 </a>
               </li>

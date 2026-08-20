@@ -19,8 +19,27 @@ export const ContactSection: React.FC = () => {
 
   const [sent, setSent] = useState(false);
 
+  const getWhatsAppMessage = () => {
+    return [
+      `📩 *NEW DIRECT INQUIRY - Mama Mia's Soko*`,
+      ``,
+      `👤 *Full Name:* ${formState.name}`,
+      `📧 *Email Address:* ${formState.email}`,
+      `🏷️ *Inquiry Category:* ${formState.subject}`,
+      ``,
+      `📝 *Message / Request Details:*`,
+      formState.message,
+    ].join('\n');
+  };
+
+  const getWhatsAppUrl = () => {
+    return `https://api.whatsapp.com/send?phone=255765658595&text=${encodeURIComponent(getWhatsAppMessage())}`;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const waUrl = getWhatsAppUrl();
+    window.location.href = waUrl;
     setSent(true);
   };
 
@@ -29,7 +48,7 @@ export const ContactSection: React.FC = () => {
       {/* Background Image for Contact Section */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/fintech_insurance_bg_1786478922041.jpg"
+          src="/src/assets/images/fintech_insurance_bg_1786478932121.jpg"
           alt="Fintech Advisory Center"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover opacity-25 scale-105"
@@ -164,15 +183,27 @@ export const ContactSection: React.FC = () => {
                 <p className="text-sm text-slate-300 max-w-md mx-auto">
                   Thank you, <strong className="text-white">{formState.name}</strong>. Your inquiry regarding "{formState.subject}" has been received by our administrative team at info@mamamia.co.tz.
                 </p>
-                <button
-                  onClick={() => {
-                    setSent(false);
-                    setFormState({ name: '', email: '', subject: 'General Partnership Inquiry', message: '' });
-                  }}
-                  className="bg-slate-900 hover:bg-slate-950 text-amber-300 font-semibold px-5 py-2.5 rounded-xl text-xs border border-amber-500/30"
-                >
-                  Send Another Message
-                </button>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+                  <a
+                    href={getWhatsAppUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition-colors shadow-lg"
+                  >
+                    <Phone className="w-4 h-4" />
+                    <span>Open in WhatsApp (+255 765 658 595)</span>
+                  </a>
+
+                  <button
+                    onClick={() => {
+                      setSent(false);
+                      setFormState({ name: '', email: '', subject: 'General Partnership Inquiry', message: '' });
+                    }}
+                    className="bg-slate-900 hover:bg-slate-950 text-slate-300 hover:text-white font-semibold px-5 py-2.5 rounded-xl text-xs border border-slate-700 transition-colors"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
               </div>
             ) : (
               <div>

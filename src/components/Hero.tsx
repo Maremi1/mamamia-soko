@@ -47,12 +47,19 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-4xl mx-auto bg-slate-950/65 sm:bg-slate-950/60 backdrop-blur-xl p-6 sm:p-10 md:p-12 rounded-3xl border border-amber-500/35 shadow-2xl space-y-6 text-center"
         >
-          {/* Eyebrow Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-amber-500/50 text-amber-300 text-xs sm:text-sm font-semibold backdrop-blur-md shadow-xl">
-            <Sparkles className="w-4 h-4 text-amber-400" />
-            <span>A Division of I Link Limited</span>
-            <span className="text-slate-500">•</span>
-            <span className="text-amber-200 font-bold">Dar es Salaam & Kigali</span>
+          {/* Eyebrow Badge with Transparent Logo (Desktop & Tablet) */}
+          <div className="hidden sm:flex flex-wrap items-center justify-center gap-3">
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-900/80 border border-amber-500/40 text-amber-300 text-xs sm:text-sm font-semibold backdrop-blur-md shadow-2xl hover:border-amber-400/70 transition-all">
+              <img
+                src="/src/assets/images/mamamia_soko_logo.png"
+                alt="Mama Mia's Soko Official Logo"
+                className="h-6 sm:h-7 w-auto object-contain drop-shadow"
+              />
+              <span className="text-slate-600">|</span>
+              <span className="text-slate-200 font-medium">A Division of I Link Limited</span>
+              <span className="text-amber-400/60 hidden md:inline">•</span>
+              <span className="text-amber-300 font-semibold hidden md:inline">Dar es Salaam & Kigali</span>
+            </div>
           </div>
 
           {/* Main Headline */}

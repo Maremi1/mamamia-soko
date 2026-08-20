@@ -41,10 +41,45 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
     }
   }, [initialStakeholderId]);
 
+  // Lock background scroll when modal is active
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
+
+  const getWhatsAppMessage = () => {
+    const stakeholder = STAKEHOLDER_PROFILES.find(p => p.id === formData.stakeholderType);
+    return [
+      `📋 *NEW ADVISORY REQUEST - Mama Mia's Soko*`,
+      ``,
+      `👤 *Name:* ${formData.name}`,
+      `📧 *Email:* ${formData.email}`,
+      `🏢 *Organization:* ${formData.organization}`,
+      `📱 *Phone / WhatsApp:* ${formData.phone || 'N/A'}`,
+      `🏷️ *Stakeholder Category:* ${stakeholder?.title || formData.stakeholderType}`,
+      `📍 *Preferred Hub:* ${formData.preferredHub}`,
+      formData.notes ? `📝 *Objectives & Details:* ${formData.notes}` : '',
+    ].filter(Boolean).join('\n');
+  };
+
+  const getWhatsAppUrl = () => {
+    return `https://api.whatsapp.com/send?phone=255765658595&text=${encodeURIComponent(getWhatsAppMessage())}`;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const waUrl = getWhatsAppUrl();
+    
+    // Direct redirect to WhatsApp
+    window.location.href = waUrl;
     setSubmitted(true);
   };
 
@@ -54,44 +89,68 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm overflow-y-auto">
-      <div className="bg-[#0A192F] text-slate-100 rounded-2xl border border-amber-500/40 w-full max-w-2xl shadow-2xl overflow-hidden relative my-8">
-        
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-lg bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
-          aria-label="Close modal"
-        >
-          <X className="w-5 h-5" />
-        </button>
+    <div 
+      className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/85 backdrop-blur-md p-2 sm:p-4 flex min-h-full items-start sm:items-center justify-center"
+      onClick={onClose}
+    >
+      <div 
+        className="bg-[#0A192F] text-slate-100 rounded-2xl border border-amber-500/40 w-full max-w-2xl shadow-2xl overflow-hidden relative my-auto max-h-[calc(100dvh-1rem)] sm:max-h-[92vh] flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Modal Top Header (Fixed/Sticky at top of modal) */}
+        <div className="p-4 sm:p-5 border-b border-slate-800 bg-[#071120] flex items-center justify-between shrink-0 gap-3">
+          <div className="flex items-center gap-3 min-w-0">
+            <img
+              src="/src/assets/images/mamamia_soko_logo.png"
+              alt="Mama Mia's Soko Official Logo"
+              className="h-8 sm:h-9 w-auto object-contain drop-shadow shrink-0"
+            />
+            <div className="pl-2.5 border-l border-slate-700/80 min-w-0">
+              <div className="flex items-center gap-1.5 text-[11px] sm:text-xs font-bold uppercase text-amber-400 truncate">
+                <Calendar className="w-3 h-3 shrink-0" />
+                <span>Strategic Trade Advisory</span>
+              </div>
+              <div className="text-[10px] sm:text-xs text-slate-300 font-medium truncate">
+                A Division of I Link Limited
+              </div>
+            </div>
+          </div>
+
+          <button
+            onClick={onClose}
+            className="p-1.5 sm:p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors shrink-0"
+            aria-label="Close modal"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
 
         {submitted ? (
-          <div className="p-8 text-center space-y-6">
-            <div className="w-16 h-16 bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center mx-auto border border-amber-500/40">
-              <CheckCircle2 className="w-10 h-10" />
+          <div className="p-5 sm:p-8 text-center space-y-5 overflow-y-auto">
+            <div className="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto border border-emerald-500/40">
+              <CheckCircle2 className="w-8 h-8" />
             </div>
 
             <div>
               <span className="text-xs font-bold uppercase text-amber-400 tracking-wider">
                 Request Confirmed
               </span>
-              <h3 className="text-2xl font-bold text-white mt-1">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mt-1">
                 Strategic Briefing Package Prepared
               </h3>
-              <p className="text-sm text-slate-300 mt-2 max-w-lg mx-auto">
+              <p className="text-xs sm:text-sm text-slate-300 mt-2 max-w-lg mx-auto leading-relaxed">
                 Thank you, <strong className="text-white">{formData.name}</strong>. Our executive advisory team at I Link Limited / Mama Mia’s Soko will contact you within 24 hours regarding <strong className="text-amber-300">{formData.organization}</strong>.
               </p>
             </div>
 
-            <div className="bg-slate-900 p-4 rounded-xl border border-slate-800 text-left text-xs space-y-2 max-w-md mx-auto">
+            <div className="bg-slate-900/90 p-4 rounded-xl border border-slate-800 text-left text-xs space-y-2 max-w-md mx-auto">
               <div className="flex justify-between">
                 <span className="text-slate-400">Selected Hub:</span>
                 <span className="text-white font-semibold">{formData.preferredHub}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-400">Contact Email:</span>
-                <span className="text-white font-semibold">{formData.email}</span>
+                <span className="text-white font-semibold truncate max-w-[180px] sm:max-w-none">{formData.email}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-400">Phone / WhatsApp:</span>
@@ -101,15 +160,13 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
               <a
-                href={`https://wa.me/255765658595?text=Hello%20Mama%20Mia%20Soko%20Team,%20I%20have%20submitted%20a%20trade%20advisory%20request%20for%20${encodeURIComponent(
-                  formData.organization
-                )}.`}
+                href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>Instant WhatsApp Connect (+255 765 658 595)</span>
+                <span>Open in WhatsApp (+255 765 658 595)</span>
               </a>
 
               <button
@@ -121,20 +178,18 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
             </div>
           </div>
         ) : (
-          <div className="p-6 sm:p-8">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase text-amber-400 mb-1">
-              <Calendar className="w-4 h-4" />
-              <span>Schedule Strategic Trade Advisory</span>
+          <div className="p-4 sm:p-6 sm:px-8 overflow-y-auto space-y-4">
+            <div>
+              <h3 className="text-lg sm:text-2xl font-bold text-white">
+                Request Delegation Briefing or Consultation
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 mt-1">
+                Connect with Mama Mia’s Soko & I Link Limited advisory leadership across Dar es Salaam & Kigali.
+              </p>
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold text-white">
-              Request Delegation Briefing or Consultation
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-300 mt-1 mb-6">
-              Connect with Mama Mia’s Soko & I Link Limited advisory leadership across Dar es Salaam & Kigali.
-            </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <label className="block text-xs font-semibold text-slate-300 mb-1">
                     Your Full Name *
@@ -164,7 +219,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <label className="block text-xs font-semibold text-slate-300 mb-1">
                     Organization / Delegation Name *
@@ -194,7 +249,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <label className="block text-xs font-semibold text-slate-300 mb-1">
                     Stakeholder Role / Category
@@ -233,23 +288,23 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                   Specific Objectives or Delegation Details
                 </label>
                 <textarea
-                  rows={3}
+                  rows={2}
                   placeholder="Outline key sectors (e.g. Agribusiness, Energy, ICT, Trade Credit, Joint Venture structuring)..."
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500 resize-y"
                 />
               </div>
 
-              <div className="pt-2 flex items-center justify-between">
-                <div className="text-[11px] text-slate-400 flex items-center gap-1">
+              <div className="pt-2 flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                <div className="text-[11px] text-slate-400 flex items-center justify-center sm:justify-start gap-1">
                   <Clock className="w-3.5 h-3.5 text-amber-400" />
                   <span>24-Hour Response Guarantee</span>
                 </div>
 
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-6 py-2.5 rounded-xl text-xs shadow-lg transition-all"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-6 py-2.5 rounded-xl text-xs shadow-lg transition-all"
                 >
                   <span>Submit Advisory Request</span>
                   <Send className="w-3.5 h-3.5" />
@@ -258,7 +313,6 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
             </form>
           </div>
         )}
-
       </div>
     </div>
   );

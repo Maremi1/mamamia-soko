@@ -9,8 +9,8 @@ import {
 export const ECOSYSTEM_PORTALS: EcosystemPortal[] = [
   {
     name: "Mama Mia's Soko Corporate",
-    domain: "www.mamamia.co.tz",
-    url: "https://www.mamamia.co.tz",
+    domain: "mamamia.co.tz",
+    url: "https://mamamia.co.tz",
     focus: "Strategic Consulting & Market Entry",
     icon: "Building2",
     badge: "Main Corporate Portal",
@@ -29,8 +29,8 @@ export const ECOSYSTEM_PORTALS: EcosystemPortal[] = [
   },
   {
     name: "Bima Kwik Insurance",
-    domain: "www.bimakwik.com",
-    url: "https://www.bimakwik.com",
+    domain: "bimakwik.com",
+    url: "https://bimakwik.com",
     focus: "Embedded Trade Risk Protection",
     icon: "ShieldCheck",
     badge: "FinTech & InsurTech",
@@ -39,8 +39,8 @@ export const ECOSYSTEM_PORTALS: EcosystemPortal[] = [
   },
   {
     name: "Mama Mia's Foundation",
-    domain: "www.foundation.mamamia.co.tz",
-    url: "https://www.foundation.mamamia.co.tz",
+    domain: "foundation.mamamia.co.tz",
+    url: "https://foundation.mamamia.co.tz",
     focus: "ESG & Community Development",
     icon: "HeartHandshake",
     badge: "Social Impact Arm",
@@ -49,8 +49,8 @@ export const ECOSYSTEM_PORTALS: EcosystemPortal[] = [
   },
   {
     name: "I Link Limited",
-    domain: "www.ilinkbiz.com",
-    url: "https://www.ilinkbiz.com",
+    domain: "ilinkbiz.com",
+    url: "https://ilinkbiz.com",
     focus: "Regional Holding Group",
     icon: "Globe",
     badge: "Parent Entity",
@@ -65,7 +65,7 @@ export const STAKEHOLDER_PROFILES: StakeholderProfile[] = [
     title: "Inbound Trade Delegations",
     badge: "FDI & Foreign Delegations",
     icon: "PlaneArrival",
-    imageUrl: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "/src/assets/images/inbound_trade_delegation.jpg",
     bgImageUrl: "/src/assets/images/fdi_trade_bg_1786478906939.jpg",
     description: "Definitive market gateway for foreign investors, diplomatic missions, and trade delegations in East Africa. We provide end-to-end regulatory navigation, corporate structuring, and G2B/B2B matchmaking across Tanzania and Rwanda.",
     keyBenefits: [
@@ -134,7 +134,7 @@ export const STAKEHOLDER_PROFILES: StakeholderProfile[] = [
     badge: "Public Policy & G2G / G2B",
     icon: "Landmark",
     imageUrl: "https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=800&auto=format&fit=crop",
-    bgImageUrl: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=1200&auto=format&fit=crop",
+    bgImageUrl: "/src/assets/images/government_summit.jpg",
     description: "Partnering with ministries, agencies, and diplomatic missions for FDI attraction, Public-Private Partnerships (PPPs), and national trade policy alignment across East Africa.",
     keyBenefits: [
       "FDI promotion strategy & delegation management",
@@ -271,7 +271,7 @@ export const CORE_CAPABILITIES: CapabilityCategory[] = [
       },
       {
         name: "Digital Financing & Insurance Integration",
-        description: "Directly integrated with Bima Kwik (www.bimakwik.com), providing licensed digital trade risk protection, cargo insurance, and automated policy issuance."
+        description: "Directly integrated with Bima Kwik (bimakwik.com), providing licensed digital trade risk protection, cargo insurance, and automated policy issuance."
       },
       {
         name: "Multi-Tier Commerce Engine",
@@ -310,7 +310,7 @@ export const LEADERSHIP_TEAM: LeadershipMember[] = [
     category: "board",
     bio: "Provides strategic oversight, governance excellence, and high-level institutional diplomacy across East African public and private sectors.",
     avatarInitials: "AM",
-    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"
+    imageUrl: "/src/assets/images/dranselmi.jpg"
   },
   {
     name: "Ms. Dorice Malle",
@@ -319,7 +319,7 @@ export const LEADERSHIP_TEAM: LeadershipMember[] = [
     category: "board",
     bio: "Visionary founder steering Mama Mia’s Soko, Bima Kwik, and I Link Limited into a premier East African trade facilitation and strategic consulting group.",
     avatarInitials: "DM",
-    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+    imageUrl: "/src/assets/images/dorice.jpg"
   },
   {
     name: "Ms. Mary Michael",
@@ -328,7 +328,7 @@ export const LEADERSHIP_TEAM: LeadershipMember[] = [
     category: "management",
     bio: "Oversees fiscal management, corporate accounting, cross-border financial compliance, and trade transaction security.",
     avatarInitials: "MM",
-    imageUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop"
+    imageUrl: "/src/assets/images/mary_michael.png"
   },
   {
     name: "Ms. Evelyin Mwasyeba",
@@ -337,7 +337,7 @@ export const LEADERSHIP_TEAM: LeadershipMember[] = [
     category: "management",
     bio: "Manages operational execution, human resources, institutional logistics, and multi-hub administrative coordination.",
     avatarInitials: "EM",
-    imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop"
+    imageUrl: "/src/assets/images/evelyin_mwasyeba.png"
   }
 ];
 

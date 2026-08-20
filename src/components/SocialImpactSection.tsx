@@ -76,12 +76,12 @@ export const SocialImpactSection: React.FC = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://www.foundation.mamamia.co.tz"
+              href="https://foundation.mamamia.co.tz"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400 hover:text-emerald-300 bg-emerald-950/80 px-4 py-2 rounded-full border border-emerald-500/40 backdrop-blur-md transition-colors shadow-lg"
             >
-              <span>Visit www.foundation.mamamia.co.tz</span>
+              <span>Visit foundation.mamamia.co.tz</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </motion.a>
           </div>

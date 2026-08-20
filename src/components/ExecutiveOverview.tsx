@@ -57,6 +57,13 @@ export const ExecutiveOverview: React.FC = () => {
             </div>
 
             <div className="relative z-10 space-y-4">
+              <div className="inline-flex items-center gap-3">
+                <img
+                  src="/src/assets/images/mamamia_soko_logo.png"
+                  alt="Mama Mia's Soko Official Logo"
+                  className="h-10 w-auto object-contain drop-shadow"
+                />
+              </div>
               <p className="text-slate-100 text-base sm:text-lg leading-relaxed font-normal">
                 <strong className="text-amber-300 font-semibold">Mama Mia’s Soko</strong> is a premier strategic consulting, market access, and trade facilitation gateway anchored by <strong className="text-white">I Link Limited</strong> (Kigali, Rwanda & Dar es Salaam, Tanzania).
               </p>
