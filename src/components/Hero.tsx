@@ -26,7 +26,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.8 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          src="/src/assets/images/hero_market_bg_1786478895140.jpg"
+          src="/images/hero_market_bg_1786478895140.jpg"
           alt="East African Market Soko in Dar es Salaam"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center"
@@ -51,7 +51,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
           <div className="hidden sm:flex flex-wrap items-center justify-center gap-3">
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-900/80 border border-amber-500/40 text-amber-300 text-xs sm:text-sm font-semibold backdrop-blur-md shadow-2xl hover:border-amber-400/70 transition-all">
               <img
-                src="/src/assets/images/mamamia_soko_logo.png"
+                src="/images/mamamia_soko_logo.png"
                 alt="Mama Mia's Soko Official Logo"
                 className="h-6 sm:h-7 w-auto object-contain drop-shadow"
               />

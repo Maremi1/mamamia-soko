@@ -15,7 +15,7 @@ export const EcosystemSection: React.FC = () => {
     if (domain && (domain === 'mamamia.co.tz' || domain === 'soko.mamamia.co.tz')) {
       return (
         <img
-          src="/src/assets/images/mamamia_soko_emblem.png"
+          src="/images/mamamia_soko_emblem.png"
           alt="Mama Mia's Soko Emblem"
           className="w-6 h-6 object-contain"
         />

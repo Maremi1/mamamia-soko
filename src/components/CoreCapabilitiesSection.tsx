@@ -46,7 +46,7 @@ export const CoreCapabilitiesSection: React.FC<CoreCapabilitiesSectionProps> = (
       {/* Section Background Backdrop Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/fdi_trade_bg_1786478906939.jpg"
+          src="/images/fdi_trade_bg_1786478906939.jpg"
           alt="East Africa Commercial Trade Corridors"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover opacity-20 scale-105"

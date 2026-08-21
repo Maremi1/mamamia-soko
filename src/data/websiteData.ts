@@ -14,7 +14,7 @@ export const ECOSYSTEM_PORTALS: EcosystemPortal[] = [
     focus: "Strategic Consulting & Market Entry",
     icon: "Building2",
     badge: "Main Corporate Portal",
-    imageUrl: "/src/assets/images/fdi_trade_bg_1786478906939.jpg",
+    imageUrl: "/images/fdi_trade_bg_1786478906939.jpg",
     description: "The primary strategic advisory, regulatory compliance, and G2B/B2B market access gateway for foreign direct investment and trade delegations in East Africa."
   },
   {
@@ -24,7 +24,7 @@ export const ECOSYSTEM_PORTALS: EcosystemPortal[] = [
     focus: "B2B / B2G / G2B Cross-Border Commerce",
     icon: "ShoppingBag",
     badge: "Trade Engine",
-    imageUrl: "/src/assets/images/hero_market_bg_1786478895140.jpg",
+    imageUrl: "/images/hero_market_bg_1786478895140.jpg",
     description: "Multi-tiered cross-border e-commerce and referral trade platform connecting regional producers, international buyers, and government procurement channels."
   },
   {
@@ -34,7 +34,7 @@ export const ECOSYSTEM_PORTALS: EcosystemPortal[] = [
     focus: "Embedded Trade Risk Protection",
     icon: "ShieldCheck",
     badge: "FinTech & InsurTech",
-    imageUrl: "/src/assets/images/fintech_insurance_bg_1786478932121.jpg",
+    imageUrl: "/images/fintech_insurance_bg_1786478932121.jpg",
     description: "Licensed digital insurance and risk mitigation platform powering cargo protection, trade credit financing security, and digital policy issuance across supply chains."
   },
   {
@@ -44,7 +44,7 @@ export const ECOSYSTEM_PORTALS: EcosystemPortal[] = [
     focus: "ESG & Community Development",
     icon: "HeartHandshake",
     badge: "Social Impact Arm",
-    imageUrl: "/src/assets/images/foundation_impact_bg_1786478922041.jpg",
+    imageUrl: "/images/foundation_impact_bg_1786478922041.jpg",
     description: "Dedicated social impact organization co-funded by trade transactions, delivering sustainable development across 6 strategic pillars in East Africa."
   },
   {
@@ -65,8 +65,8 @@ export const STAKEHOLDER_PROFILES: StakeholderProfile[] = [
     title: "Inbound Trade Delegations",
     badge: "FDI & Foreign Delegations",
     icon: "PlaneArrival",
-    imageUrl: "/src/assets/images/inbound_trade_delegation.jpg",
-    bgImageUrl: "/src/assets/images/fdi_trade_bg_1786478906939.jpg",
+    imageUrl: "/images/inbound_trade_delegation.jpg",
+    bgImageUrl: "/images/fdi_trade_bg_1786478906939.jpg",
     description: "Definitive market gateway for foreign investors, diplomatic missions, and trade delegations in East Africa. We provide end-to-end regulatory navigation, corporate structuring, and G2B/B2B matchmaking across Tanzania and Rwanda.",
     keyBenefits: [
       "End-to-end regulatory compliance & license acquisition",
@@ -100,7 +100,7 @@ export const STAKEHOLDER_PROFILES: StakeholderProfile[] = [
     badge: "AfCFTA Corridor Growth",
     icon: "Globe2",
     imageUrl: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop",
-    bgImageUrl: "/src/assets/images/hero_market_bg_1786478895140.jpg",
+    bgImageUrl: "/images/hero_market_bg_1786478895140.jpg",
     description: "Accelerating intra-African trade under the AfCFTA framework. Connecting East African producers and commercial entities to regional trade corridors, preferential tariffs, and supplier networks.",
     keyBenefits: [
       "AfCFTA tariff navigation & documentation",
@@ -116,8 +116,8 @@ export const STAKEHOLDER_PROFILES: StakeholderProfile[] = [
     title: "Tanzanian Enterprises",
     badge: "Local Producer Scaling",
     icon: "Factory",
-    imageUrl: "/src/assets/images/hero_market_bg_1786478895140.jpg",
-    bgImageUrl: "/src/assets/images/hero_market_bg_1786478895140.jpg",
+    imageUrl: "/images/hero_market_bg_1786478895140.jpg",
+    bgImageUrl: "/images/hero_market_bg_1786478895140.jpg",
     description: "Empowering local manufacturers, agribusinesses, and service providers with digital marketplace access, trade insurance, corporate restructuring, and global buyer connections.",
     keyBenefits: [
       "Digital marketplace onboarding for global reach",
@@ -134,7 +134,7 @@ export const STAKEHOLDER_PROFILES: StakeholderProfile[] = [
     badge: "Public Policy & G2G / G2B",
     icon: "Landmark",
     imageUrl: "https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=800&auto=format&fit=crop",
-    bgImageUrl: "/src/assets/images/government_summit.jpg",
+    bgImageUrl: "/images/government_summit.jpg",
     description: "Partnering with ministries, agencies, and diplomatic missions for FDI attraction, Public-Private Partnerships (PPPs), and national trade policy alignment across East Africa.",
     keyBenefits: [
       "FDI promotion strategy & delegation management",
@@ -150,8 +150,8 @@ export const STAKEHOLDER_PROFILES: StakeholderProfile[] = [
     title: "International Organizations & Development Partners",
     badge: "ESG & Economic Inclusion",
     icon: "Handshake",
-    imageUrl: "/src/assets/images/foundation_impact_bg_1786478922041.jpg",
-    bgImageUrl: "/src/assets/images/foundation_impact_bg_1786478922041.jpg",
+    imageUrl: "/images/foundation_impact_bg_1786478922041.jpg",
+    bgImageUrl: "/images/foundation_impact_bg_1786478922041.jpg",
     description: "Operational execution partner for multilateral agencies, driving market access, digital inclusion, MSME empowerment, and co-funded ESG initiatives in East Africa.",
     keyBenefits: [
       "On-the-ground project execution in Tanzania & Rwanda",
@@ -167,7 +167,7 @@ export const STAKEHOLDER_PROFILES: StakeholderProfile[] = [
     title: "Investors & Private Equity",
     badge: "Turnkey Investment Support",
     icon: "TrendingUp",
-    imageUrl: "/src/assets/images/fdi_trade_bg_1786478906939.jpg",
+    imageUrl: "/images/fdi_trade_bg_1786478906939.jpg",
     bgImageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
     description: "De-risking capital deployment across East Africa. We deliver turnkey corporate structuring, sector feasibility studies, target vetting, and embedded trade insurance.",
     keyBenefits: [
@@ -201,8 +201,8 @@ export const STAKEHOLDER_PROFILES: StakeholderProfile[] = [
     title: "Internal Management Framework",
     badge: "Operational Blueprint",
     icon: "Cpu",
-    imageUrl: "/src/assets/images/fintech_insurance_bg_1786478932121.jpg",
-    bgImageUrl: "/src/assets/images/fintech_insurance_bg_1786478932121.jpg",
+    imageUrl: "/images/fintech_insurance_bg_1786478932121.jpg",
+    bgImageUrl: "/images/fintech_insurance_bg_1786478932121.jpg",
     description: "Our operational execution engine uniting digital technology, trade logistics, and strategic advisory. Commercial profits directly co-fund sustainable development through Mama Mia's Foundation.",
     keyBenefits: [
       "Cross-border execution engine across Dar es Salaam & Kigali",
@@ -263,7 +263,7 @@ export const CORE_CAPABILITIES: CapabilityCategory[] = [
     title: "Digital Marketplace, Technology & Security Solutions",
     subtitle: "Multi-tier cross-border digital trade platform bridging B2B, B2G, G2B, G2G",
     icon: "Network",
-    imageUrl: "/src/assets/images/fintech_insurance_bg_1786478932121.jpg",
+    imageUrl: "/images/fintech_insurance_bg_1786478932121.jpg",
     items: [
       {
         name: "Referral & Commission Model",
@@ -310,7 +310,7 @@ export const LEADERSHIP_TEAM: LeadershipMember[] = [
     category: "board",
     bio: "Provides strategic oversight, governance excellence, and high-level institutional diplomacy across East African public and private sectors.",
     avatarInitials: "AM",
-    imageUrl: "/src/assets/images/dranselmi.jpg"
+    imageUrl: "/images/dranselmi.jpg"
   },
   {
     name: "Ms. Dorice Malle",
@@ -319,7 +319,7 @@ export const LEADERSHIP_TEAM: LeadershipMember[] = [
     category: "board",
     bio: "Visionary founder steering Mama Mia’s Soko, Bima Kwik, and I Link Limited into a premier East African trade facilitation and strategic consulting group.",
     avatarInitials: "DM",
-    imageUrl: "/src/assets/images/dorice.jpg"
+    imageUrl: "/images/dorice.jpg"
   },
   {
     name: "Ms. Mary Michael",
@@ -328,7 +328,7 @@ export const LEADERSHIP_TEAM: LeadershipMember[] = [
     category: "management",
     bio: "Oversees fiscal management, corporate accounting, cross-border financial compliance, and trade transaction security.",
     avatarInitials: "MM",
-    imageUrl: "/src/assets/images/mary_michael.png"
+    imageUrl: "/images/mary_michael.png"
   },
   {
     name: "Ms. Evelyin Mwasyeba",
@@ -337,7 +337,7 @@ export const LEADERSHIP_TEAM: LeadershipMember[] = [
     category: "management",
     bio: "Manages operational execution, human resources, institutional logistics, and multi-hub administrative coordination.",
     avatarInitials: "EM",
-    imageUrl: "/src/assets/images/evelyin_mwasyeba.png"
+    imageUrl: "/images/evelyin_mwasyeba.png"
   }
 ];
 
@@ -346,7 +346,7 @@ export const FOUNDATION_PILLARS: FoundationPillar[] = [
     number: 1,
     title: "Digital & Financial Inclusion",
     icon: "Smartphone",
-    imageUrl: "/src/assets/images/fintech_insurance_bg_1786478932121.jpg",
+    imageUrl: "/images/fintech_insurance_bg_1786478932121.jpg",
     summary: "Expanding access to digital tools, mobile banking platforms, and financial literacy programs across marginalized communities.",
     details: [
       "Deployment of mobile-first financial tools for rural producers",
@@ -358,7 +358,7 @@ export const FOUNDATION_PILLARS: FoundationPillar[] = [
     number: 2,
     title: "Women & Youth Empowerment",
     icon: "Sparkles",
-    imageUrl: "/src/assets/images/foundation_impact_bg_1786478922041.jpg",
+    imageUrl: "/images/foundation_impact_bg_1786478922041.jpg",
     summary: "Fostering sustainable livelihoods through entrepreneurship programs, technical skills training, mentorship, and business incubation.",
     details: [
       "Targeted business incubation for women-owned enterprises",

@@ -48,7 +48,7 @@ export const ContactSection: React.FC = () => {
       {/* Background Image for Contact Section */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/fintech_insurance_bg_1786478932121.jpg"
+          src="/images/fintech_insurance_bg_1786478932121.jpg"
           alt="Fintech Advisory Center"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover opacity-25 scale-105"

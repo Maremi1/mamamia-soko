@@ -101,7 +101,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
         <div className="p-4 sm:p-5 border-b border-slate-800 bg-[#071120] flex items-center justify-between shrink-0 gap-3">
           <div className="flex items-center gap-3 min-w-0">
             <img
-              src="/src/assets/images/mamamia_soko_logo.png"
+              src="/images/mamamia_soko_logo.png"
               alt="Mama Mia's Soko Official Logo"
               className="h-8 sm:h-9 w-auto object-contain drop-shadow shrink-0"
             />

@@ -48,7 +48,7 @@ export const ExecutiveOverview: React.FC = () => {
           >
             <div className="absolute inset-0 z-0">
               <img
-                src="/src/assets/images/fdi_trade_bg_1786478906939.jpg"
+                src="/images/fdi_trade_bg_1786478906939.jpg"
                 alt="FDI Trade Background"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover opacity-20"
@@ -59,7 +59,7 @@ export const ExecutiveOverview: React.FC = () => {
             <div className="relative z-10 space-y-4">
               <div className="inline-flex items-center gap-3">
                 <img
-                  src="/src/assets/images/mamamia_soko_logo.png"
+                  src="/images/mamamia_soko_logo.png"
                   alt="Mama Mia's Soko Official Logo"
                   className="h-10 w-auto object-contain drop-shadow"
                 />
@@ -122,7 +122,7 @@ export const ExecutiveOverview: React.FC = () => {
             <motion.div whileHover={{ scale: 1.02 }} className="relative overflow-hidden bg-slate-800/80 p-5 rounded-xl border border-slate-700/80 hover:border-amber-500/50 transition-all flex items-start gap-4 shadow-xl backdrop-blur-md group">
               <div className="absolute inset-0 z-0">
                 <img
-                  src="/src/assets/images/fintech_insurance_bg_1786478932121.jpg"
+                  src="/images/fintech_insurance_bg_1786478932121.jpg"
                   alt="Trade FinTech"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover opacity-20 group-hover:opacity-35 transition-opacity duration-500"
@@ -143,7 +143,7 @@ export const ExecutiveOverview: React.FC = () => {
             <motion.div whileHover={{ scale: 1.02 }} className="relative overflow-hidden bg-slate-800/80 p-5 rounded-xl border border-slate-700/80 hover:border-amber-500/50 transition-all flex items-start gap-4 shadow-xl backdrop-blur-md group">
               <div className="absolute inset-0 z-0">
                 <img
-                  src="/src/assets/images/foundation_impact_bg_1786478922041.jpg"
+                  src="/images/foundation_impact_bg_1786478922041.jpg"
                   alt="Social Return"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover opacity-20 group-hover:opacity-35 transition-opacity duration-500"

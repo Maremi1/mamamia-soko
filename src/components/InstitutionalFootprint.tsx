@@ -9,7 +9,7 @@ export const InstitutionalFootprint: React.FC = () => {
       {/* Background Image for Footprint Section */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/fdi_trade_bg_1786478906939.jpg"
+          src="/images/fdi_trade_bg_1786478906939.jpg"
           alt="East Africa Trade Port Corridor"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover opacity-25 scale-105"

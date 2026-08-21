@@ -43,7 +43,7 @@ export const SocialImpactSection: React.FC = () => {
       {/* Background Hero Image for Foundation Section */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/foundation_impact_bg_1786478922041.jpg"
+          src="/images/foundation_impact_bg_1786478922041.jpg"
           alt="Mama Mias Foundation Community Impact Background"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover opacity-25 scale-105"

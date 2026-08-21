@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-4 space-y-4">
             <div className="space-y-2">
               <img
-                src="/src/assets/images/mamamia_soko_logo.png"
+                src="/images/mamamia_soko_logo.png"
                 alt="Mama Mia's Soko Logo"
                 className="h-12 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]"
               />

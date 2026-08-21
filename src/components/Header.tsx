@@ -78,7 +78,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenConsultation }) => {
         {/* Logo */}
         <a href="#hero" className="flex items-center group py-1">
           <img
-            src="/src/assets/images/mamamia_soko_logo.png"
+            src="/images/mamamia_soko_logo.png"
             alt="Mama Mia's Soko Official Logo"
             className="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
           />
