@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ThemeProvider } from './context/ThemeContext';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ExecutiveOverview } from './components/ExecutiveOverview';
@@ -12,7 +13,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ConsultationModal } from './components/ConsultationModal';
 
-export default function App() {
+function AppContent() {
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
   const [selectedStakeholderForModal, setSelectedStakeholderForModal] = useState<
     string | undefined
@@ -29,7 +30,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A192F] text-slate-100 font-sans selection:bg-amber-500 selection:text-slate-950">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#0A192F] text-slate-900 dark:text-slate-100 font-sans selection:bg-amber-500 selection:text-slate-950 transition-colors duration-300">
       {/* Header with Navigation */}
       <Header onOpenConsultation={handleOpenConsultation} />
 
@@ -75,3 +76,12 @@ export default function App() {
     </div>
   );
 }
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
+  );
+}
+

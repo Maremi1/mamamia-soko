@@ -1,1 +1,77 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Exact Flame Gradient Colors Sampled from Logo */
+  --color-flame-highlight: rgb(253, 230, 126);  /* Top / Highlight (Bright Yellow) #FDE67E */
+  --color-flame-gold: rgb(240, 203, 93);       /* Upper Mid-Section (Gold / Medium Yellow) #F0CB5D */
+  --color-flame-amber: rgb(228, 175, 70);      /* Lower Mid-Section (Warm Amber / Gold-Orange) #E4AF46 */
+  --color-flame-shadow: rgb(203, 137, 45);     /* Base / Shadow (Deep Orange-Brown) #CB892D */
+
+  /* Override Amber Palette with Exact Flame Scale for Universal Site Consistency */
+  --color-amber-50: rgb(254, 252, 240);
+  --color-amber-100: rgb(254, 246, 207);
+  --color-amber-200: rgb(253, 230, 126);  /* #FDE67E - Highlight */
+  --color-amber-300: rgb(245, 218, 108);  /* Intermediate Gold */
+  --color-amber-400: rgb(240, 203, 93);   /* #F0CB5D - Upper Mid Gold */
+  --color-amber-500: rgb(228, 175, 70);   /* #E4AF46 - Lower Mid Warm Amber */
+  --color-amber-600: rgb(203, 137, 45);   /* #CB892D - Base Shadow */
+  --color-amber-700: rgb(171, 112, 34);   /* Deep Accent */
+  --color-amber-800: rgb(138, 88, 26);
+  --color-amber-900: rgb(112, 70, 20);
+  --color-amber-950: rgb(64, 38, 8);
+}
+
+:root {
+  --page-bg: #FFFFFF;
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --header-border: rgba(226, 232, 240, 0.9);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --card-border: rgba(226, 232, 240, 0.9);
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --section-alt-bg: #F8FAFC;
+  --section-subtle-bg: #F1F5F9;
+  --input-bg: #FFFFFF;
+  --input-border: #CBD5E1;
+}
+
+html.dark {
+  --page-bg: #0A192F;
+  --header-bg: rgba(7, 17, 32, 0.92);
+  --header-border: rgba(30, 41, 59, 0.8);
+  --card-bg: rgba(15, 34, 61, 0.85);
+  --card-border: rgba(51, 65, 85, 0.7);
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --section-alt-bg: #071120;
+  --section-subtle-bg: #0A192F;
+  --input-bg: #0F172A;
+  --input-border: #334155;
+}
+
+body {
+  background-color: var(--page-bg);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Flame Gradient Utilities */
+.bg-flame-gradient {
+  background: linear-gradient(135deg, rgb(253, 230, 126) 0%, rgb(240, 203, 93) 35%, rgb(228, 175, 70) 70%, rgb(203, 137, 45) 100%);
+}
+
+.bg-flame-gradient-horizontal {
+  background: linear-gradient(to right, rgb(253, 230, 126), rgb(240, 203, 93), rgb(228, 175, 70), rgb(203, 137, 45));
+}
+
+.text-flame-gradient {
+  background: linear-gradient(to right, rgb(253, 230, 126) 0%, rgb(240, 203, 93) 50%, rgb(228, 175, 70) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shadow-flame {
+  box-shadow: 0 10px 25px -5px rgba(228, 175, 70, 0.35), 0 8px 10px -6px rgba(203, 137, 45, 0.25);
+}

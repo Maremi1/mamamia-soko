@@ -148,14 +148,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-12 bg-slate-900/85 rounded-2xl p-5 border border-amber-500/40 shadow-2xl backdrop-blur-xl"
+          className="mt-12 bg-white/90 dark:bg-slate-900/85 rounded-2xl p-5 border border-slate-200 dark:border-amber-500/40 shadow-2xl backdrop-blur-xl transition-colors duration-300"
         >
-          <div className="flex items-center justify-between mb-3 border-b border-slate-800/80 pb-2">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400">
+          <div className="flex items-center justify-between mb-3 border-b border-slate-200 dark:border-slate-800/80 pb-2">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">
               <Layers className="w-4 h-4" />
               <span>Mama Mia's Digital Portal Ecosystem</span>
             </div>
-            <span className="text-[11px] text-slate-400 hidden sm:inline">
+            <span className="text-[11px] text-slate-500 dark:text-slate-400 hidden sm:inline font-medium">
               Click to visit integrated platform portals
             </span>
           </div>
@@ -168,7 +168,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
                 href={portal.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative overflow-hidden p-3 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-slate-700 hover:border-amber-500/60 transition-all flex flex-col justify-between shadow-md"
+                className="group relative overflow-hidden p-3 rounded-xl bg-slate-50 dark:bg-slate-800/90 hover:bg-white dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-amber-500/60 transition-all flex flex-col justify-between shadow-sm hover:shadow-md"
               >
                 {portal.imageUrl && (
                   <div className="absolute inset-0 z-0">
@@ -176,23 +176,23 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
                       src={portal.imageUrl}
                       alt={portal.name}
                       referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover opacity-15 group-hover:opacity-30 group-hover:scale-105 transition-all duration-500"
+                      className="w-full h-full object-cover opacity-10 dark:opacity-15 group-hover:opacity-20 dark:group-hover:opacity-30 group-hover:scale-105 transition-all duration-500"
                     />
-                    <div className="absolute inset-0 bg-slate-900/80" />
+                    <div className="absolute inset-0 bg-white/80 dark:bg-slate-900/80" />
                   </div>
                 )}
                 <div className="relative z-10">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-semibold text-amber-300 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20 backdrop-blur-sm">
+                    <span className="text-[10px] font-bold text-amber-700 dark:text-amber-300 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20 backdrop-blur-sm">
                       {portal.badge}
                     </span>
-                    <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-amber-400 transition-colors" />
+                    <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors" />
                   </div>
-                  <div className="font-bold text-xs text-white mt-2 group-hover:text-amber-300 transition-colors">
+                  <div className="font-bold text-xs text-slate-900 dark:text-white mt-2 group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors">
                     {portal.domain}
                   </div>
                 </div>
-                <div className="relative z-10 text-[11px] text-slate-300 mt-1 line-clamp-1">
+                <div className="relative z-10 text-[11px] text-slate-600 dark:text-slate-300 mt-1 line-clamp-1 font-medium">
                   {portal.focus}
                 </div>
               </motion.a>

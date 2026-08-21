@@ -54,7 +54,7 @@ export const StakeholderTabSection: React.FC<StakeholderTabSectionProps> = ({
   };
 
   return (
-    <section id="stakeholders" className="py-20 bg-[#071120] text-slate-100 relative">
+    <section id="stakeholders" className="py-20 bg-slate-50 dark:bg-[#071120] text-slate-900 dark:text-slate-100 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -65,20 +65,20 @@ export const StakeholderTabSection: React.FC<StakeholderTabSectionProps> = ({
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-12"
         >
-          <div className="inline-flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
-            <Users className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 text-amber-700 dark:text-amber-400 text-xs font-bold uppercase tracking-wider mb-3 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+            <Users className="w-4 h-4 text-amber-600 dark:text-amber-400" />
             <span>Tailored Stakeholder Solutions</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Who We Serve Across East Africa & Global Corridors
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base mt-3 font-medium">
+          <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base mt-3 font-medium">
             Select your organization type to explore customized market access, advisory, and trade facilitation services.
           </p>
         </motion.div>
 
         {/* Tab Selection Bar */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-900 border-b border-slate-800 mb-8">
+        <div className="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-700 scrollbar-track-slate-100 dark:scrollbar-track-slate-900 border-b border-slate-200 dark:border-slate-800 mb-8">
           {STAKEHOLDER_PROFILES.map((profile) => {
             const isActive = profile.id === activeTabId;
             return (
@@ -87,10 +87,10 @@ export const StakeholderTabSection: React.FC<StakeholderTabSectionProps> = ({
                 whileTap={{ scale: 0.98 }}
                 key={profile.id}
                 onClick={() => setActiveTabId(profile.id)}
-                className={`flex items-center gap-2 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all shrink-0 ${
+                className={`flex items-center gap-2 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all shrink-0 cursor-pointer ${
                   isActive
-                    ? 'bg-amber-500 text-slate-950 shadow-lg shadow-amber-500/20 ring-2 ring-amber-400 font-bold'
-                    : 'bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700'
+                    ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 shadow-md shadow-amber-500/20 ring-2 ring-amber-400 font-bold'
+                    : 'bg-white dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-sm'
                 }`}
               >
                 {getTabIcon(profile.id)}
@@ -108,37 +108,37 @@ export const StakeholderTabSection: React.FC<StakeholderTabSectionProps> = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="bg-slate-900/80 rounded-2xl border border-amber-500/40 p-6 sm:p-10 shadow-2xl relative overflow-hidden backdrop-blur-2xl"
+            className="bg-white dark:bg-slate-900/80 rounded-2xl border border-slate-200 dark:border-amber-500/40 p-6 sm:p-10 shadow-xl dark:shadow-2xl relative overflow-hidden backdrop-blur-2xl transition-colors duration-300"
           >
-            {/* Background Image Texture for Selected Profile - High Visibility */}
+            {/* Background Image Texture for Selected Profile */}
             {(activeProfile.bgImageUrl || activeProfile.imageUrl) && (
               <div className="absolute inset-0 z-0">
                 <img
                   src={activeProfile.bgImageUrl || activeProfile.imageUrl}
                   alt={activeProfile.title}
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover opacity-35 scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover opacity-10 dark:opacity-35 scale-105 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/80 to-slate-950/90" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/95 dark:from-slate-950/90 via-white/90 dark:via-slate-950/80 to-white/95 dark:to-slate-950/90" />
               </div>
             )}
 
-            <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-800/80">
+            <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-200 dark:border-slate-800/80">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-amber-500/10 text-amber-400 rounded-xl border border-amber-500/30 backdrop-blur-sm">
+                <div className="p-3 bg-amber-500/10 text-amber-700 dark:text-amber-400 rounded-xl border border-amber-500/30 backdrop-blur-sm">
                   {getTabIcon(activeProfile.id)}
                 </div>
                 <div>
-                  <span className="text-xs font-bold uppercase text-amber-400 tracking-wider">
+                  <span className="text-xs font-bold uppercase text-amber-700 dark:text-amber-400 tracking-wider">
                     {activeProfile.badge}
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
                     {activeProfile.title}
                   </h3>
                 </div>
               </div>
 
-              <span className="text-xs text-slate-300 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700 font-medium backdrop-blur-sm">
+              <span className="text-xs text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 font-semibold backdrop-blur-sm">
                 I Link Limited & Mama Mia's Soko Division
               </span>
             </div>
@@ -148,25 +148,25 @@ export const StakeholderTabSection: React.FC<StakeholderTabSectionProps> = ({
               {/* Detailed Description with Prominent Visual Card Image */}
               <div className="lg:col-span-7 space-y-4 flex flex-col justify-between">
                 <div>
-                  <h4 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                  <h4 className="text-sm font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
                     Strategic Scope & Solution Brief
                   </h4>
-                  <div className="bg-slate-800/75 backdrop-blur-xl p-5 rounded-xl border border-slate-700/80 shadow-xl space-y-4">
+                  <div className="bg-slate-50 dark:bg-slate-800/75 backdrop-blur-xl p-5 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-md space-y-4">
                     {activeProfile.imageUrl && (
-                      <div className="h-56 sm:h-64 rounded-xl overflow-hidden border border-slate-600/80 mb-4 relative group">
+                      <div className="h-56 sm:h-64 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-600/80 mb-4 relative group shadow">
                         <img
                           src={activeProfile.imageUrl}
                           alt={activeProfile.title}
                           referrerPolicy="no-referrer"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                         <span className="absolute bottom-3 left-3 text-xs font-bold text-amber-300 bg-slate-950/85 px-3 py-1 rounded-md border border-amber-500/40 backdrop-blur-md">
                           {activeProfile.badge}
                         </span>
                       </div>
                     )}
-                    <p className="text-slate-100 text-sm sm:text-base leading-relaxed font-normal">
+                    <p className="text-slate-700 dark:text-slate-100 text-sm sm:text-base leading-relaxed font-normal">
                       {activeProfile.description}
                     </p>
                   </div>
@@ -177,7 +177,7 @@ export const StakeholderTabSection: React.FC<StakeholderTabSectionProps> = ({
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
                     onClick={() => onOpenConsultation(activeProfile.id)}
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-6 py-3 rounded-xl shadow-xl hover:shadow-amber-500/25 transition-all text-sm"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-amber-500/25 transition-all text-sm cursor-pointer"
                   >
                     <span>{activeProfile.ctaLabel}</span>
                     <ArrowRight className="w-4 h-4" />
@@ -186,26 +186,26 @@ export const StakeholderTabSection: React.FC<StakeholderTabSectionProps> = ({
               </div>
 
               {/* Key Deliverables & Benefits */}
-              <div className="lg:col-span-5 bg-slate-800/85 backdrop-blur-md p-6 rounded-xl border border-slate-700/80 space-y-4 flex flex-col justify-between shadow-xl">
+              <div className="lg:col-span-5 bg-slate-50 dark:bg-slate-800/85 backdrop-blur-md p-6 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-4 flex flex-col justify-between shadow-md">
                 <div>
-                  <h4 className="text-sm font-bold text-amber-400 uppercase tracking-wider flex items-center gap-2 mb-3">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400" />
+                  <h4 className="text-sm font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider flex items-center gap-2 mb-3">
+                    <CheckCircle2 className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                     Key Strategic Benefits
                   </h4>
                   <ul className="space-y-3">
                     {activeProfile.keyBenefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-slate-200 text-xs sm:text-sm">
-                        <span className="w-2 h-2 rounded-full bg-amber-400 mt-1.5 shrink-0 shadow-sm" />
+                      <li key={idx} className="flex items-start gap-3 text-slate-700 dark:text-slate-200 text-xs sm:text-sm">
+                        <span className="w-2 h-2 rounded-full bg-amber-500 dark:bg-amber-400 mt-1.5 shrink-0 shadow-sm" />
                         <span className="font-medium">{benefit}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="pt-4 border-t border-slate-700/80 text-[11px] text-slate-300 space-y-1">
-                  <div>🌐 Integrated with: <span className="text-amber-300 font-medium">soko.mamamia.co.tz</span></div>
-                  <div>🛡️ Trade Protection: <span className="text-amber-300 font-medium">Bima Kwik Insurance</span></div>
-                  <div>💚 Foundation Impact: <span className="text-amber-300 font-medium">Co-funded ESG Pillars</span></div>
+                <div className="pt-4 border-t border-slate-200 dark:border-slate-700/80 text-[11px] text-slate-600 dark:text-slate-300 space-y-1 font-medium">
+                  <div>🌐 Integrated with: <span className="text-amber-700 dark:text-amber-300 font-bold">soko.mamamia.co.tz</span></div>
+                  <div>🛡️ Trade Protection: <span className="text-amber-700 dark:text-amber-300 font-bold">Bima Kwik Insurance</span></div>
+                  <div>💚 Foundation Impact: <span className="text-amber-700 dark:text-amber-300 font-bold">Co-funded ESG Pillars</span></div>
                 </div>
               </div>
 
