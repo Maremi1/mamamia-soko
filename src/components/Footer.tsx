@@ -7,7 +7,8 @@ import {
   ShieldCheck,
   Building2,
   Heart,
-  Globe
+  Globe,
+  Instagram
 } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -73,10 +74,43 @@ export const Footer: React.FC = () => {
                   <span>✉️ info@mamamia.co.tz</span>
                 </a>
               </li>
-              <li className="pt-2 border-t border-slate-200 dark:border-slate-800/80 text-[11px] text-slate-500 dark:text-slate-400 space-y-1">
-                <div>• Mama Mia's Soko: <strong className="text-slate-800 dark:text-slate-200">@mamamiasoko</strong></div>
-                <div>• Foundation: <strong className="text-slate-800 dark:text-slate-200">@mamamiafoundation</strong></div>
-                <div>• Bima Kwik: <strong className="text-slate-800 dark:text-slate-200">@bimakwik</strong></div>
+              <li className="pt-2 border-t border-slate-200 dark:border-slate-800/80 text-[11px] text-slate-500 dark:text-slate-400 space-y-1.5">
+                <div className="flex items-center gap-1.5">
+                  <Instagram className="w-3 h-3 text-pink-500 shrink-0" />
+                  <span>Mama Mia's Soko:</span>
+                  <a
+                    href="https://www.instagram.com/mamamiasoko?igsi=MWJ2ajI1YW5zdHpmaQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-800 dark:text-slate-200 hover:text-amber-600 dark:hover:text-amber-400 transition-colors font-bold underline-offset-2 hover:underline"
+                  >
+                    @mamamiasoko
+                  </a>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <Instagram className="w-3 h-3 text-pink-500 shrink-0" />
+                  <span>Foundation:</span>
+                  <a
+                    href="https://www.instagram.com/mamamiafoundation?igsi=MWIyMjlhMDN1bW5pMw=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-800 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors font-bold underline-offset-2 hover:underline"
+                  >
+                    @mamamiafoundation
+                  </a>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <Instagram className="w-3 h-3 text-pink-500 shrink-0" />
+                  <span>Bima Kwik:</span>
+                  <a
+                    href="https://www.instagram.com/bimakwik?igsi=YTdrbTBva2R1OW9x"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-800 dark:text-slate-200 hover:text-amber-600 dark:hover:text-amber-400 transition-colors font-bold underline-offset-2 hover:underline"
+                  >
+                    @bimakwik
+                  </a>
+                </div>
               </li>
             </ul>
           </div>

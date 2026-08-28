@@ -6,7 +6,8 @@ import {
   MapPin,
   Send,
   MessageSquare,
-  CheckCircle2
+  CheckCircle2,
+  Instagram
 } from 'lucide-react';
 
 export const ContactSection: React.FC = () => {
@@ -153,15 +154,33 @@ export const ContactSection: React.FC = () => {
                 Official Media Handles
               </span>
               <div className="flex flex-wrap gap-2 text-xs">
-                <span className="bg-slate-100 dark:bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-200 font-semibold">
-                  Mama Mia's Soko: <strong className="text-amber-700 dark:text-amber-300">@mamamiasoko</strong>
-                </span>
-                <span className="bg-slate-100 dark:bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-200 font-semibold">
-                  Foundation: <strong className="text-emerald-700 dark:text-emerald-300">@mamamiafoundation</strong>
-                </span>
-                <span className="bg-slate-100 dark:bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-200 font-semibold">
-                  Bima Kwik: <strong className="text-amber-700 dark:text-amber-300">@bimakwik</strong>
-                </span>
+                <a
+                  href="https://www.instagram.com/mamamiasoko?igsi=MWJ2ajI1YW5zdHpmaQ=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-slate-100 hover:bg-slate-200 dark:bg-slate-900/90 dark:hover:bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-200 font-semibold hover:border-amber-500/50 hover:text-amber-600 dark:hover:text-amber-400 transition-colors inline-flex items-center gap-1.5"
+                >
+                  <Instagram className="w-3.5 h-3.5 text-pink-500" />
+                  <span>Mama Mia's Soko: <strong className="text-amber-700 dark:text-amber-300">@mamamiasoko</strong></span>
+                </a>
+                <a
+                  href="https://www.instagram.com/mamamiafoundation?igsi=MWIyMjlhMDN1bW5pMw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-slate-100 hover:bg-slate-200 dark:bg-slate-900/90 dark:hover:bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-200 font-semibold hover:border-emerald-500/50 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5"
+                >
+                  <Instagram className="w-3.5 h-3.5 text-pink-500" />
+                  <span>Foundation: <strong className="text-emerald-700 dark:text-emerald-300">@mamamiafoundation</strong></span>
+                </a>
+                <a
+                  href="https://www.instagram.com/bimakwik?igsi=YTdrbTBva2R1OW9x"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-slate-100 hover:bg-slate-200 dark:bg-slate-900/90 dark:hover:bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-200 font-semibold hover:border-amber-500/50 hover:text-amber-600 dark:hover:text-amber-400 transition-colors inline-flex items-center gap-1.5"
+                >
+                  <Instagram className="w-3.5 h-3.5 text-pink-500" />
+                  <span>Bima Kwik: <strong className="text-amber-700 dark:text-amber-300">@bimakwik</strong></span>
+                </a>
               </div>
             </div>
           </motion.div>
