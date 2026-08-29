@@ -5,13 +5,11 @@ import {
   ArrowRight,
   ShieldCheck,
   Building,
-  Building2,
   TrendingUp,
   ExternalLink,
   ChevronRight,
   Sparkles,
-  Layers,
-  Calendar
+  Layers
 } from 'lucide-react';
 import { ECOSYSTEM_PORTALS } from '../data/websiteData';
 
@@ -80,20 +78,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
 
           {/* CTA Buttons */}
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-            {/* Mobile-Only Marketplace Button (Desktop already has the prominent button in the Top Header) */}
-            <motion.a
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              href="https://soko.mamamia.co.tz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="sm:hidden w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-extrabold px-7 py-3.5 rounded-xl shadow-xl transition-all text-base cursor-pointer"
-            >
-              <Building2 className="w-5 h-5 text-slate-950" />
-              <span>Visit Digital Marketplace</span>
-              <ExternalLink className="w-4 h-4 text-slate-950" />
-            </motion.a>
-
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
