@@ -122,14 +122,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenConsultation }) => {
               <Moon className="w-4 h-4 text-slate-700" />
             )}
           </button>
-
-          <button
-            onClick={() => onOpenConsultation()}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-lg shadow-md hover:shadow-amber-500/20 transition-all transform hover:-translate-y-0.5 cursor-pointer"
-          >
-            <Calendar className="w-4 h-4" />
-            <span>Schedule Consultation</span>
-          </button>
         </div>
 
         {/* Mobile Buttons (Theme Toggle + Menu Toggle) */}
