@@ -47,15 +47,6 @@ export const MarketplaceUpgradePage: React.FC<MarketplaceUpgradePageProps> = ({
       <main className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 py-8 flex-1 flex flex-col justify-center w-full">
         <div className="bg-slate-950/75 sm:bg-slate-950/70 backdrop-blur-2xl border border-amber-500/35 rounded-3xl p-6 sm:p-12 text-center shadow-2xl shadow-black/80 ring-1 ring-white/10">
           
-          {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-400/50 text-amber-300 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-6 shadow-md backdrop-blur-md">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
-            </span>
-            <span>Platform Upgrade in Progress</span>
-          </div>
-
           {/* Heading */}
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
             We Are Upgrading Our{' '}
