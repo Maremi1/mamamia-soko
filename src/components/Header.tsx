@@ -62,14 +62,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenConsultation }) => {
 
           <div className="flex items-center gap-2 sm:gap-3">
             <a
-              href="https://soko.mamamia.co.tz"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#/marketplace"
               className="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold text-[11px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-md shadow-sm hover:shadow-amber-500/20 transition-all transform hover:-translate-y-0.5 shrink-0"
             >
               <Building2 className="w-3.5 h-3.5 text-slate-950 shrink-0" />
               <span>Visit Digital Marketplace</span>
-              <ExternalLink className="w-2.5 h-2.5 text-slate-950 shrink-0" />
             </a>
             <button
               onClick={() => onOpenConsultation()}
@@ -162,11 +159,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenConsultation }) => {
 
           <div className="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-2">
             <a
-              href="https://soko.mamamia.co.tz"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#/marketplace"
+              onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-bold px-4 py-2.5 rounded-lg text-sm shadow"
             >
+              <Building2 className="w-4 h-4 text-slate-950" />
               <span>Visit Digital Marketplace ↗</span>
             </a>
             <button

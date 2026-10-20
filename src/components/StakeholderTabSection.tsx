@@ -56,7 +56,7 @@ export const StakeholderTabSection: React.FC<StakeholderTabSectionProps> = ({
   return (
     <section id="stakeholders" className="py-20 bg-slate-50 dark:bg-[#071120] text-slate-900 dark:text-slate-100 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -87,11 +87,10 @@ export const StakeholderTabSection: React.FC<StakeholderTabSectionProps> = ({
                 whileTap={{ scale: 0.98 }}
                 key={profile.id}
                 onClick={() => setActiveTabId(profile.id)}
-                className={`flex items-center gap-2 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all shrink-0 cursor-pointer ${
-                  isActive
+                className={`flex items-center gap-2 px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all shrink-0 cursor-pointer ${isActive
                     ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 shadow-md shadow-amber-500/20 ring-2 ring-amber-400 font-bold'
                     : 'bg-white dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-sm'
-                }`}
+                  }`}
               >
                 {getTabIcon(profile.id)}
                 <span>{profile.title}</span>
@@ -144,7 +143,7 @@ export const StakeholderTabSection: React.FC<StakeholderTabSectionProps> = ({
             </div>
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-              
+
               {/* Detailed Description with Prominent Visual Card Image */}
               <div className="lg:col-span-7 space-y-4 flex flex-col justify-between">
                 <div>

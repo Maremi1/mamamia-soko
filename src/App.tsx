@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
@@ -12,12 +12,33 @@ import { InstitutionalFootprint } from './components/InstitutionalFootprint';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ConsultationModal } from './components/ConsultationModal';
+import { MarketplaceUpgradePage } from './components/MarketplaceUpgradePage';
 
 function AppContent() {
+  const [isMarketplaceView, setIsMarketplaceView] = useState(() => {
+    return (
+      typeof window !== 'undefined' &&
+      window.location.hash.toLowerCase().includes('marketplace')
+    );
+  });
+
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
   const [selectedStakeholderForModal, setSelectedStakeholderForModal] = useState<
     string | undefined
   >(undefined);
+
+  useEffect(() => {
+    const handleHash = () => {
+      const isMarketplace = window.location.hash.toLowerCase().includes('marketplace');
+      setIsMarketplaceView(isMarketplace);
+      if (isMarketplace) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    };
+
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
 
   const handleOpenConsultation = (stakeholderId?: string) => {
     setSelectedStakeholderForModal(stakeholderId);
@@ -28,6 +49,26 @@ function AppContent() {
     setIsConsultationModalOpen(false);
     setSelectedStakeholderForModal(undefined);
   };
+
+  if (isMarketplaceView) {
+    return (
+      <>
+        <MarketplaceUpgradePage
+          onBackToHome={() => {
+            window.location.hash = '#hero';
+            setIsMarketplaceView(false);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          onOpenConsultation={handleOpenConsultation}
+        />
+        <ConsultationModal
+          isOpen={isConsultationModalOpen}
+          onClose={handleCloseConsultation}
+          initialStakeholderId={selectedStakeholderForModal}
+        />
+      </>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-[#0A192F] text-slate-900 dark:text-slate-100 font-sans selection:bg-amber-500 selection:text-slate-950 transition-colors duration-300">

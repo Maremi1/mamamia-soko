@@ -40,7 +40,7 @@ export const EcosystemSection: React.FC = () => {
   return (
     <section id="ecosystem" className="py-20 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-100 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 text-amber-700 dark:text-amber-400 text-xs font-bold uppercase tracking-wider mb-3 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
@@ -57,14 +57,16 @@ export const EcosystemSection: React.FC = () => {
 
         {/* Portals Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {ECOSYSTEM_PORTALS.map((portal) => (
-            <a
-              key={portal.domain}
-              href={portal.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white dark:bg-slate-800/85 rounded-2xl border border-slate-200 dark:border-slate-700/80 hover:border-amber-500/60 transition-all flex flex-col justify-between shadow-lg dark:shadow-2xl group hover:-translate-y-1 overflow-hidden backdrop-blur-md"
-            >
+          {ECOSYSTEM_PORTALS.map((portal) => {
+            const isMarketplace = portal.domain === 'soko.mamamia.co.tz';
+            return (
+              <a
+                key={portal.domain}
+                href={isMarketplace ? '#/marketplace' : portal.url}
+                target={isMarketplace ? undefined : '_blank'}
+                rel={isMarketplace ? undefined : 'noopener noreferrer'}
+                className="bg-white dark:bg-slate-800/85 rounded-2xl border border-slate-200 dark:border-slate-700/80 hover:border-amber-500/60 transition-all flex flex-col justify-between shadow-lg dark:shadow-2xl group hover:-translate-y-1 overflow-hidden backdrop-blur-md"
+              >
               <div>
                 {/* Portal Image Header */}
                 {portal.imageUrl ? (
@@ -112,7 +114,8 @@ export const EcosystemSection: React.FC = () => {
                 <ExternalLink className="w-4 h-4" />
               </div>
             </a>
-          ))}
+          );
+        })}
         </div>
 
       </div>

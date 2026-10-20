@@ -15,10 +15,10 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-100 dark:bg-[#050C1A] text-slate-700 dark:text-slate-300 border-t border-slate-200 dark:border-amber-500/20 pt-16 pb-8 text-xs transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-slate-200 dark:border-slate-800">
-          
+
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-4">
             <div className="space-y-2">
@@ -132,9 +132,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="https://soko.mamamia.co.tz"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#/marketplace"
                   className="flex items-center justify-between text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
                 >
                   <span>🛍️ soko.mamamia.co.tz</span>
